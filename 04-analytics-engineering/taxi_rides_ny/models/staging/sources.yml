@@ -1,0 +1,9 @@
+sources:
+  - name: nytaxi
+    database: oceanic-citadel-490504-p4 # GCP 프로젝트 이름
+    schema: nytaxi # BigQuery dataset 이름
+
+
+    tables:
+      - name: green_tripdata 
+      - name: yellow_tripdata

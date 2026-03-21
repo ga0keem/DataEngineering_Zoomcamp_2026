@@ -10,7 +10,7 @@ renamed as (
     select
         -- identifiers
         cast(VendorID as integer) as vendor_id,
-        cast(RatecodeID as integer) as ratecode_id,
+        cast(RatecodeID as integer) as rate_code_id,
         cast(PULocationID as integer) as pickup_location_id,
         cast(DOLocationID as integer) as dropoff_location_id,
 
@@ -19,7 +19,7 @@ renamed as (
         cast(tpep_dropoff_datetime as timestamp) as dropoff_datetime,
 
         -- trip info
-        store_and_fwd_flag,
+        cast(store_and_fwd_flag AS string) as store_and_fwd_flag,
         cast(passenger_count as integer) as passenger_count,
         cast(trip_distance as numeric) as trip_distance,
         cast(1 as integer) as trip_type,  -- Yellow는 항상 street-hail
